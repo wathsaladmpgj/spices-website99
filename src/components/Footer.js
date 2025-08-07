@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { 
   MapPinIcon, 
@@ -39,12 +38,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-primary-yellow to-primary-green rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">S</span>
@@ -69,15 +63,10 @@ const Footer = () => {
                 <span>info@spiceworld.com</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h3 className="text-lg font-semibold mb-4 text-primary-yellow">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -91,15 +80,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Product Categories */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h3 className="text-lg font-semibold mb-4 text-primary-yellow">Products</h3>
             <ul className="space-y-2">
               {productCategories.map((category) => (
@@ -113,15 +97,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Business Hours & Social */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h3 className="text-lg font-semibold mb-4 text-primary-yellow">Business Hours</h3>
             <div className="space-y-1 text-sm text-gray-300 mb-6">
               <div className="flex items-center space-x-2">
@@ -149,7 +128,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom Bar */}

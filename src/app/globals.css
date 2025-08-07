@@ -54,3 +54,16 @@ body {
 .animate-pulse-slow {
   animation: pulse-slow 2s ease-in-out infinite;
 }
+
+/* Mobile navigation optimizations */
+@media (max-width: 768px) {
+  .mobile-nav-fast {
+    transform: translate3d(0, 0, 0);
+    will-change: height, opacity;
+    backface-visibility: hidden;
+  }
+  
+  .mobile-nav-fast * {
+    transform: translate3d(0, 0, 0);
+  }
+}

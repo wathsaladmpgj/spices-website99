@@ -170,7 +170,7 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -187,9 +187,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-green-100 rounded-full opacity-60 animate-pulse-slow"></div>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -219,7 +219,7 @@ export default function Home() {
                 Learn More About Us
                 <ArrowRightIcon className="ml-2 h-4 w-4" />
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -227,7 +227,7 @@ export default function Home() {
       {/* Featured Products Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -241,11 +241,11 @@ export default function Home() {
               Discover our most popular spices, loved by home cooks and
               professional chefs alike
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProducts.map((product, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -280,16 +280,16 @@ export default function Home() {
                     <span className="text-2xl font-bold text-green-600">
                       {product.price}
                     </span>
-                    <motion.button
+                    <button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="bg-amber-400 text-white px-4 py-2 rounded-full font-medium hover:bg-amber-500 transition-colors duration-200"
                     >
                       Add to Cart
-                    </motion.button>
+                    </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -308,7 +308,7 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-br from-green-600 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -320,11 +320,11 @@ export default function Home() {
               We're committed to bringing you the finest spices with unmatched
               quality and service
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -337,7 +337,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-green-100">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -360,11 +360,11 @@ export default function Home() {
               Don't just take our word for it - hear from our satisfied
               customers
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -389,7 +389,7 @@ export default function Home() {
                   </p>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -404,7 +404,7 @@ export default function Home() {
             </h3>
             <div className="flex space-x-4">
               {["📘", "📷", "🐦", "💼"].map((icon, index) => (
-                <motion.a
+                <a
                   key={index}
                   href="#"
                   whileHover={{ scale: 1.1, rotate: 5 }}
@@ -412,7 +412,7 @@ export default function Home() {
                   className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200"
                 >
                   <span className="text-xl">{icon}</span>
-                </motion.a>
+                </a>
               ))}
             </div>
           </div>
