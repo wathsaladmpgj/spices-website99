@@ -9,7 +9,7 @@ export const WHATSAPP_CONFIG = {
 
 Product: ${productName}
 Weight: ${weight}
-Price: $${price}
+Price: Rs:${price}
 
 Please let me know about availability and delivery options.`
 };

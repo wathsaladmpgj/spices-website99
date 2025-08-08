@@ -386,7 +386,7 @@ export default function About() {
               Join thousands of satisfied customers who trust SpiceWorld for
               their culinary adventures
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <div className="flex flex-col gap-7 sm:flex-row sm:gap-4 justify-center">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

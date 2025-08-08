@@ -322,11 +322,11 @@ export default function Products() {
                     <div className="flex flex-col items-left justify-between">
                       <div className="flex items-center space-x-2">
                         <span className="text-xl font-bold text-green-600">
-                          ${product.price}
+                          Rs:{product.price}
                         </span>
                         {product.originalPrice && (
                           <span className="text-sm text-gray-500 line-through">
-                            ${product.originalPrice}
+                            Rs:{product.originalPrice}
                           </span>
                         )}
                       </div>
@@ -510,7 +510,7 @@ export default function Products() {
                             }`}
                           >
                             <div className="font-medium">{option.weight}</div>
-                            <div className="text-sm text-gray-600">${option.price}</div>
+                            <div className="text-sm text-gray-600">Rs:{option.price}</div>
                           </button>
                         ))}
                       </div>
@@ -528,7 +528,7 @@ export default function Products() {
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-lg font-medium">Total Price:</span>
                       <span className="text-2xl font-bold text-green-600">
-                        ${selectedPrice}
+                        Rs:{selectedPrice}
                       </span>
                     </div>
 

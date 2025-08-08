@@ -203,13 +203,13 @@ export default function Home() {
 
 Product: ${selectedProduct.name}
 Weight: ${selectedWeight}
-Price: $${price}
+Price: Rs:${price}
 ${selectedProduct.origin ? `Origin: ${selectedProduct.origin}` : ''}
 ${selectedProduct.isOrganic ? 'Organic: Yes' : ''}
 
 Please let me know about availability and delivery options.`;
-    
-    const phoneNumber = "1234567890"; // Replace with actual WhatsApp number
+
+    const phoneNumber = "+94711519402"; // Replace with actual WhatsApp number
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -396,7 +396,7 @@ Please let me know about availability and delivery options.`;
             </p>
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-green-600">
-                {product.price}
+                Rs:{product.price}
               </span>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -516,7 +516,7 @@ Please let me know about availability and delivery options.`;
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-medium text-gray-900">Total Price:</span>
                   <span className="text-2xl font-bold text-green-600">
-                    ${(() => {
+                    Rs:{(() => {
                       if (!selectedProduct || !selectedWeight) return '0.00';
                       
                       // Use weightOptions if available, otherwise calculate based on base price
