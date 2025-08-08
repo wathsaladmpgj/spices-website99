@@ -19,7 +19,7 @@ export default function About() {
     { number: "5+", label: "Years of Excellence" },
     { number: "15+", label: "Farmer Suport" },
     { number: "7+", label: "Distributors" },
-    { number: "1.2K+", label: "Happy Customers" },
+    { number: "2K+", label: "Happy Customers" },
   ];
 
   const team = [

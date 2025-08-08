@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import { 
@@ -255,7 +256,7 @@ export default function Contact() {
                   />
                 </div>
 
-                <button
+                <motion.button
                   type="submit"
                   disabled={isSubmitting}
                   whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
@@ -277,7 +278,7 @@ export default function Contact() {
                       <PaperAirplaneIcon className="ml-2 h-5 w-5" />
                     </>
                   )}
-                </button>
+                </motion.button>
               </form>
             </div>
           </div>
@@ -328,7 +329,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Quick Chat on WhatsApp</h3>
                   <p className="text-green-100 mb-3">Get instant answers to your questions</p>
-                  <a
+                  <motion.a
                     href="https://wa.me/15551237742"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -338,7 +339,7 @@ export default function Contact() {
                   >
                     <ChatBubbleLeftRightIcon className="h-5 w-5 mr-2" />
                     Start Chat
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </div>
@@ -371,13 +372,13 @@ export default function Contact() {
                   In a real implementation, this would be an embedded Google Maps 
                   showing our exact location with directions and nearby landmarks.
                 </p>
-                <button
+                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors duration-200"
                 >
                   Get Directions
-                </button>
+                </motion.button>
               </div>
             </div>
           </div>

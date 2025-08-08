@@ -2,10 +2,12 @@
 
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -44,11 +46,17 @@ const Navigation = () => {
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="text-gray-700 hover:text-green-600 transition-all duration-300 font-medium relative py-2 px-3 rounded-lg hover:bg-green-50 transform hover:scale-105"
+                  className={`transition-all duration-300 font-medium relative py-2 px-3 rounded-lg transform hover:scale-105 ${
+                    pathname === item.href
+                      ? 'text-green-600 bg-green-50'
+                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                  }`}
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 transition-all duration-300 group-hover:w-full rounded-full"></span>
-                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-green-500/10 to-green-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-green-500 to-green-600 transition-all duration-100 rounded-full ${
+                    pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></span>
+                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-green-500/10 to-green-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-100"></span>
                 </Link>
               </div>
             ))}
@@ -63,9 +71,9 @@ const Navigation = () => {
               aria-expanded={isOpen}
             >
               {isOpen ? (
-                <XMarkIcon className="h-6 w-6 transition-transform duration-300 rotate-0 hover:rotate-90" />
+                <XMarkIcon className="h-6 w-6 transition-transform duration-20 rotate-0 hover:rotate-90" />
               ) : (
-                <Bars3Icon className="h-6 w-6 transition-transform duration-300" />
+                <Bars3Icon className="h-6 w-6 transition-transform duration-20" />
               )}
             </button>
           </div>
@@ -79,14 +87,45 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-3 text-gray-700 hover:text-green-600 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 transition-all duration-300 touch-manipulation relative group rounded-lg mx-2 my-1"
+                  className={`block px-4 py-3 mx-2 my-1 rounded-lg transition-all duration-300 touch-manipulation relative group overflow-hidden ${
+                    pathname === item.href
+                      ? 'text-white bg-gradient-to-r from-green-500 to-green-600 shadow-lg shadow-green-500/30 transform scale-105'
+                      : 'text-gray-700 hover:text-green-600 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 hover:shadow-md'
+                  }`}
                   onClick={closeMenu}
                 >
-                  <span className="relative z-10">{item.name}</span>
-                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-6 rounded-full"></span>
+                  {/* Background animation effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 translate-x-full group-hover:translate-x-0 transition-transform duration-500 opacity-10"></div>
+                  
+                  {/* Content with enhanced highlighting */}
+                  <div className="relative z-10 flex items-center justify-between">
+                    <span className="font-medium transition-transform duration-300 group-hover:translate-x-1">
+                      {item.name}
+                    </span>
+                    
+                    {/* Active page indicator */}
+                    {pathname === item.href && (
+                      <div className="w-2 h-2 bg-white rounded-full shadow-lg animate-pulse"></div>
+                    )}
+                    
+                    {/* Hover arrow for non-active pages */}
+                    {pathname !== item.href && (
+                      <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 text-green-600 font-bold">
+                        →
+                      </span>
+                    )}
+                  </div>
+                  
+                  {/* Bottom highlight line */}
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-green-600 transition-all duration-300 rounded-full ${
+                    pathname === item.href ? 'w-full' : 'w-0 group-hover:w-6'
+                  }`}></span>
                 </Link>
               ))}
             </div>
+            
+            {/* Bottom accent gradient */}
+            <div className="h-1 bg-gradient-to-r from-green-400 via-green-500 to-green-600 opacity-30"></div>
           </div>
         )}
       </div>
