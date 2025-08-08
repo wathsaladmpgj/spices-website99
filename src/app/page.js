@@ -62,6 +62,13 @@ export default function Home() {
       rating: 5.0,
       description: "Authentic Indian spice blend with complex aromatic flavors",
     },
+    {
+      name: "Himalayan Pink Salt",
+      price: "$8.99",
+      image: "home_card2.jpg",
+      rating: 4.8,
+      description: "Pure, unrefined salt from the pristine Himalayan mountains",
+    },
   ];
 
   const testimonials = [
@@ -243,7 +250,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {featuredProducts.map((product, index) => (
               <div
                 key={index}

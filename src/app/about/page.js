@@ -16,15 +16,15 @@ import {
 
 export default function About() {
   const stats = [
-    { number: "35+", label: "Years of Excellence" },
-    { number: "40+", label: "Farmer Suport" },
-    { number: "90+", label: "Distributors" },
-    { number: "10K+", label: "Happy Customers" },
+    { number: "5+", label: "Years of Excellence" },
+    { number: "15+", label: "Farmer Suport" },
+    { number: "7+", label: "Distributors" },
+    { number: "1.2K+", label: "Happy Customers" },
   ];
 
   const team = [
     {
-      name: "Rajesh Patel",
+      name: "Mohamed Zarook",
       role: "Founder & CEO",
       bio: "Spice expert with 40+ years of experience in global sourcing",
       image: "👨‍💼",
@@ -171,7 +171,7 @@ export default function About() {
               </h2>
               <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 1985 by Rajesh Patel, SpiceWorld began as a small
+                  Founded in 2019 by Mohamed Zarook, SpiceWorld began as a small
                   family business with a simple mission: to bring authentic,
                   premium-quality spices from around the world to kitchens
                   everywhere.
@@ -183,8 +183,8 @@ export default function About() {
                   to serve both home cooks and professional chefs worldwide.
                 </p>
                 <p>
-                  Today, we're proud to offer over 500 premium spices sourced
-                  from more than 50 countries, each one carefully selected and
+                  Today, we're proud to offer over 15+ premium spices sourced
+                  from more than 20 cities, each one carefully selected and
                   tested to meet our exacting standards for freshness, purity,
                   and flavor.
                 </p>
@@ -368,49 +368,7 @@ export default function About() {
             </div>
           </div>
         </section>
-        {/* Certifications */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-8 sm:mb-12"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Our <span className="text-amber-500">Certifications</span>
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              We maintain the highest standards through rigorous certifications
-              and quality controls
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-4 sm:p-6 rounded-xl shadow-lg text-center"
-              >
-                <div className="text-green-600 mb-3 sm:mb-4 flex justify-center">
-                  {cert.icon}
-                </div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
-                  {cert.name}
-                </h3>
-                <p className="text-gray-600 text-xs sm:text-sm">
-                  {cert.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Call to Action */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-green-600 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

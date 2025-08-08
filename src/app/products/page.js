@@ -2,16 +2,17 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import { products, categories } from "../../data/products";
+import { WHATSAPP_CONFIG } from "../../config/whatsapp";
 import {
   MagnifyingGlassIcon,
   FunnelIcon,
   StarIcon,
-  XMarkIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 export default function Products() {
@@ -21,216 +22,14 @@ export default function Products() {
   const [sortBy, setSortBy] = useState("name");
   const [currentPage, setCurrentPage] = useState(1);
   const [showFilters, setShowFilters] = useState(false);
+  
+  // Modal states
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedWeight, setSelectedWeight] = useState(null);
+  const [selectedPrice, setSelectedPrice] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const itemsPerPage = 12;
-
-  // Mock product data
-  const products = [
-    {
-      id: 1,
-      name: "Organic Turmeric Powder",
-      category: "ground",
-      price: 12.99,
-      originalPrice: 15.99,
-      rating: 4.9,
-      reviews: 127,
-      image: "home_card2.jpg",
-      description: "Premium golden turmeric with anti-inflammatory properties",
-      origin: "India",
-      isOrganic: true,
-      isBestseller: true,
-      inStock: true,
-    },
-    {
-      id: 2,
-      name: "Himalayan Pink Salt",
-      category: "salt",
-      price: 8.99,
-      originalPrice: null,
-      rating: 4.8,
-      reviews: 203,
-      image: "home_card3.jpg",
-      description: "Pure, unrefined salt from the pristine Himalayan mountains",
-      origin: "Pakistan",
-      isOrganic: false,
-      isBestseller: true,
-      inStock: true,
-    },
-    {
-      id: 3,
-      name: "Garam Masala Blend",
-      category: "blends",
-      price: 15.99,
-      originalPrice: null,
-      rating: 5.0,
-      reviews: 89,
-      image: "home_card1.jpg",
-      description: "Authentic Indian spice blend with complex aromatic flavors",
-      origin: "India",
-      isOrganic: true,
-      isBestseller: false,
-      inStock: true,
-    },
-    {
-      id: 4,
-      name: "Ceylon Cinnamon Sticks",
-      category: "whole",
-      price: 18.99,
-      originalPrice: 22.99,
-      rating: 4.7,
-      reviews: 156,
-      image: "home_card2.jpg",
-      description: "True Ceylon cinnamon with delicate, sweet flavor",
-      origin: "Sri Lanka",
-      isOrganic: true,
-      isBestseller: false,
-      inStock: true,
-    },
-    {
-      id: 5,
-      name: "Smoked Paprika",
-      category: "ground",
-      price: 11.99,
-      originalPrice: null,
-      rating: 4.6,
-      reviews: 94,
-      image: "home_card1.jpg",
-      description: "Intensely smoky Spanish paprika for authentic flavors",
-      origin: "Spain",
-      isOrganic: false,
-      isBestseller: false,
-      inStock: true,
-    },
-    {
-      id: 6,
-      name: "Black Peppercorns",
-      category: "whole",
-      price: 14.99,
-      originalPrice: null,
-      rating: 4.8,
-      reviews: 178,
-      image: "home_card4.jpg",
-      description: "Premium Tellicherry peppercorns with bold, complex heat",
-      origin: "India",
-      isOrganic: true,
-      isBestseller: true,
-      inStock: false,
-    },
-    {
-      id: 7,
-      name: "Mediterranean Herb Blend",
-      category: "blends",
-      price: 13.99,
-      originalPrice: 16.99,
-      rating: 4.5,
-      reviews: 67,
-      image: "home_card2.jpg",
-      description: "Classic blend of oregano, thyme, rosemary, and basil",
-      origin: "Greece",
-      isOrganic: true,
-      isBestseller: false,
-      inStock: true,
-    },
-    {
-      id: 8,
-      name: "Star Anise Pods",
-      category: "whole",
-      price: 16.99,
-      originalPrice: null,
-      rating: 4.4,
-      reviews: 45,
-      image: "home_card4.jpg",
-      description: "Aromatic star-shaped pods with licorice-like flavor",
-      origin: "China",
-      isOrganic: false,
-      isBestseller: false,
-      inStock: true,
-    },
-    {
-      id: 9,
-      name: "Curry Powder",
-      category: "blends",
-      price: 12.49,
-      originalPrice: null,
-      rating: 4.7,
-      reviews: 112,
-      image: "home_card4.jpg",
-      description: "Aromatic curry blend perfect for Indian cuisine",
-      origin: "India",
-      isOrganic: true,
-      isBestseller: false,
-      inStock: true,
-    },
-    {
-      id: 10,
-      name: "Vanilla Beans",
-      category: "whole",
-      price: 24.99,
-      originalPrice: 29.99,
-      rating: 4.9,
-      reviews: 87,
-      image: "home_card3.jpg",
-      description: "Premium Madagascar vanilla beans with rich aroma",
-      origin: "Madagascar",
-      isOrganic: true,
-      isBestseller: true,
-      inStock: true,
-    },
-    {
-      id: 11,
-      name: "Chili Powder",
-      category: "ground",
-      price: 9.99,
-      originalPrice: null,
-      rating: 4.3,
-      reviews: 156,
-      image: "home_card1.jpg",
-      description: "Medium heat chili powder for everyday cooking",
-      origin: "Mexico",
-      isOrganic: false,
-      isBestseller: false,
-      inStock: true,
-    },
-    {
-      id: 12,
-      name: "Cardamom Pods",
-      category: "whole",
-      price: 21.99,
-      originalPrice: 25.99,
-      rating: 4.8,
-      reviews: 73,
-      image: "home_card3.jpg",
-      description: "Aromatic green cardamom pods with sweet, floral notes",
-      origin: "Guatemala",
-      isOrganic: true,
-      isBestseller: false,
-      inStock: true,
-    },
-  ];
-
-  const categories = [
-    { value: "all", label: "All Categories" },
-    { value: "whole", label: "Whole Spices" },
-    { value: "ground", label: "Ground Spices" },
-    { value: "blends", label: "Spice Blends" },
-    { value: "salt", label: "Salts" },
-  ];
-
-  const priceRanges = [
-    { value: "all", label: "All Prices" },
-    { value: "0-10", label: "Under $10" },
-    { value: "10-15", label: "$10 - $15" },
-    { value: "15-20", label: "$15 - $20" },
-    { value: "20+", label: "$20+" },
-  ];
-
-  const sortOptions = [
-    { value: "name", label: "Name A-Z" },
-    { value: "price-low", label: "Price: Low to High" },
-    { value: "price-high", label: "Price: High to Low" },
-    { value: "rating", label: "Highest Rated" },
-    { value: "bestseller", label: "Best Sellers" },
-  ];
 
   // Filter and sort products
   const filteredProducts = useMemo(() => {
@@ -287,6 +86,71 @@ export default function Products() {
   useMemo(() => {
     setCurrentPage(1);
   }, [searchTerm, selectedCategory, priceRange, sortBy]);
+
+  // Modal functions
+  const openProductModal = (product) => {
+    try {
+      console.log("Attempting to open modal for product:", product.name);
+      setSelectedProduct(product);
+      
+      // Handle weight options
+      if (product.weightOptions && product.weightOptions.length > 0) {
+        console.log("Setting weight options:", product.weightOptions[0]);
+        setSelectedWeight(product.weightOptions[0].weight);
+        setSelectedPrice(product.weightOptions[0].price);
+      } else {
+        console.log("No weight options, using defaults");
+        setSelectedWeight("100g"); // Default weight
+        setSelectedPrice(product.price);
+      }
+      
+      console.log("Opening modal...");
+      setIsModalOpen(true);
+    } catch (error) {
+      console.error("Error opening modal:", error);
+    }
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+    setSelectedWeight(null);
+    setSelectedPrice(null);
+  };
+
+  const handleWeightChange = (weight, price) => {
+    setSelectedWeight(weight);
+    setSelectedPrice(price);
+  };
+
+  const sendToWhatsApp = () => {
+    console.log("WhatsApp button clicked");
+    console.log("Selected product:", selectedProduct?.name);
+    console.log("Selected weight:", selectedWeight);
+    console.log("Selected price:", selectedPrice);
+    
+    if (!selectedProduct || !selectedPrice) {
+      console.error("Missing required data for WhatsApp");
+      return;
+    }
+    
+    try {
+      const weight = selectedWeight || "100g";
+      const message = WHATSAPP_CONFIG.messageTemplate(
+        selectedProduct.name,
+        weight,
+        selectedPrice
+      );
+      
+      console.log("Generated message:", message);
+      const whatsappUrl = `https://wa.me/${WHATSAPP_CONFIG.phoneNumber}?text=${encodeURIComponent(message)}`;
+      console.log("WhatsApp URL:", whatsappUrl);
+      
+      window.open(whatsappUrl, '_blank');
+    } catch (error) {
+      console.error("Error sending to WhatsApp:", error);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -372,30 +236,6 @@ export default function Products() {
                 </div>
               </div>
 
-              {/* Price Filter */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Price Range
-                </label>
-                <div className="space-y-2">
-                  {priceRanges.map((range) => (
-                    <label key={range.value} className="flex items-center">
-                      <input
-                        type="radio"
-                        name="price"
-                        value={range.value}
-                        checked={priceRange === range.value}
-                        onChange={(e) => setPriceRange(e.target.value)}
-                        className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300"
-                      />
-                      <span className="ml-2 text-sm text-gray-700">
-                        {range.label}
-                      </span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
               {/* Clear Filters */}
               <button
                 onClick={() => {
@@ -420,20 +260,10 @@ export default function Products() {
                 {Math.min(startIndex + itemsPerPage, filteredProducts.length)}{" "}
                 of {filteredProducts.length} products
               </p>
-
-              <div className="flex items-center space-x-2">
-                <span className="text-sm text-gray-700">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="border border-gray-300 rounded-lg px-3 py-1 text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                >
-                  {sortOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
+              
+              {/* Debug info - remove in production */}
+              <div className="text-xs text-gray-400">
+                Modal: {isModalOpen ? "Open" : "Closed"} | Selected: {selectedProduct?.name || "None"}
               </div>
             </div>
 
@@ -446,7 +276,8 @@ export default function Products() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 relative"
+                  onClick={() => openProductModal(product)}
+                  className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 relative cursor-pointer"
                 >
                   <div className="aspect-square bg-gradient-to-br from-amber-50 to-green-50 flex items-center justify-center relative overflow-hidden">
                     {product.image.endsWith(".jpg") ? (
@@ -504,10 +335,16 @@ export default function Products() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         disabled={!product.inStock}
-                        className="px-4 py-2 rounded-full font-medium transition-colors duration-200 
-                            bg-amber-400 text-white hover:bg-amber-500"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          console.log("Button clicked for:", product.name);
+                          openProductModal(product);
+                        }}
+                        className="px-4 py-2 rounded-full font-medium transition-colors duration-200  
+                            bg-amber-400 text-white hover:bg-amber-500 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        Add to Cart
+                        {product.inStock ? "View Details" : "Out of Stock"}
                       </motion.button>
                     </div>
                   </div>
@@ -579,6 +416,141 @@ export default function Products() {
           </div>
         </div>
       </div>
+
+      {/* Product Detail Modal */}
+      {isModalOpen && selectedProduct && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+          onClick={(e) => {
+            // Close modal if clicking on backdrop
+            if (e.target === e.currentTarget) {
+              closeModal();
+            }
+          }}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex justify-between items-center p-6 border-b">
+              <h2 className="text-2xl font-bold text-gray-900">Product Details</h2>
+              <button
+                onClick={closeModal}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              >
+                <XMarkIcon className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Product Image */}
+                <div className="aspect-square bg-gradient-to-br from-amber-50 to-green-50 rounded-xl overflow-hidden">
+                  {selectedProduct.image.endsWith(".jpg") ? (
+                    <img
+                      src={`${selectedProduct.image}`}
+                      alt={selectedProduct.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex items-center justify-center h-full text-8xl">
+                      {selectedProduct.image}
+                    </div>
+                  )}
+                </div>
+
+                {/* Product Info */}
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {selectedProduct.name}
+                    </h3>
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="flex items-center space-x-1">
+                        <StarIcon className="h-5 w-5 text-amber-400 fill-current" />
+                        <span className="text-lg font-medium">{selectedProduct.rating}</span>
+                        <span className="text-gray-500">({selectedProduct.reviews} reviews)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    {selectedProduct.detailedDescription || selectedProduct.description}
+                  </p>
+
+                  <div className="flex items-center space-x-2 text-sm text-gray-500">
+                    <span>Origin: {selectedProduct.origin}</span>
+                    {selectedProduct.isOrganic && (
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">
+                        Organic
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Weight Selection */}
+                  {selectedProduct.weightOptions && selectedProduct.weightOptions.length > 0 ? (
+                    <div>
+                      <label className="block text-lg font-medium text-gray-900 mb-3">
+                        Select Weight:
+                      </label>
+                      <div className="grid grid-cols-2 gap-2">
+                        {selectedProduct.weightOptions.map((option) => (
+                          <button
+                            key={option.weight}
+                            onClick={() => handleWeightChange(option.weight, option.price)}
+                            className={`p-3 border-2 rounded-lg text-center transition-colors ${
+                              selectedWeight === option.weight
+                                ? "border-green-500 bg-green-50 text-green-700"
+                                : "border-gray-200 hover:border-gray-300"
+                            }`}
+                          >
+                            <div className="font-medium">{option.weight}</div>
+                            <div className="text-sm text-gray-600">${option.price}</div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <label className="block text-lg font-medium text-gray-900 mb-3">
+                        Weight: 100g (Standard)
+                      </label>
+                    </div>
+                  )}
+
+                  {/* Price Display */}
+                  <div className="border-t pt-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-lg font-medium">Total Price:</span>
+                      <span className="text-2xl font-bold text-green-600">
+                        ${selectedPrice}
+                      </span>
+                    </div>
+
+                    {/* WhatsApp Button */}
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={sendToWhatsApp}
+                      className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                    >
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.309"/>
+                      </svg>
+                      <span>Order via WhatsApp</span>
+                    </motion.button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       <Footer />
     </div>

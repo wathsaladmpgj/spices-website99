@@ -13,6 +13,7 @@ const Navigation = () => {
     { name: 'Products', href: '/products' },
     { name: 'Contact', href: '/contact' },
     { name: 'Distributors', href: '/distributors' },
+    { name: 'Farmer Support', href: '/farmerSupport' },
   ];
 
   const toggleMenu = useCallback(() => {
@@ -40,13 +41,14 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <div key={item.name}>
+              <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="text-gray-700 hover:text-primary-green transition-colors duration-200 font-medium relative group"
+                  className="text-gray-700 hover:text-green-600 transition-all duration-300 font-medium relative py-2 px-3 rounded-lg hover:bg-green-50 transform hover:scale-105"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-green transition-all duration-200 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 transition-all duration-300 group-hover:w-full rounded-full"></span>
+                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-green-500/10 to-green-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </Link>
               </div>
             ))}
@@ -56,14 +58,14 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-primary-green p-2 touch-manipulation"
+              className="text-gray-700 hover:text-green-600 hover:bg-green-50 p-2 rounded-lg transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 touch-manipulation"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
             >
               {isOpen ? (
-                <XMarkIcon className="h-6 w-6" />
+                <XMarkIcon className="h-6 w-6 transition-transform duration-300 rotate-0 hover:rotate-90" />
               ) : (
-                <Bars3Icon className="h-6 w-6" />
+                <Bars3Icon className="h-6 w-6 transition-transform duration-300" />
               )}
             </button>
           </div>
@@ -77,10 +79,11 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-3 text-gray-700 hover:text-primary-green hover:bg-light-green/30 transition-colors duration-0 touch-manipulation"
+                  className="block px-4 py-3 text-gray-700 hover:text-green-600 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 transition-all duration-300 touch-manipulation relative group rounded-lg mx-2 my-1"
                   onClick={closeMenu}
                 >
-                  {item.name}
+                  <span className="relative z-10">{item.name}</span>
+                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-6 rounded-full"></span>
                 </Link>
               ))}
             </div>

@@ -7,7 +7,6 @@ import {
   MapPinIcon,
   PhoneIcon,
   EnvelopeIcon,
-  ClockIcon,
   ChatBubbleLeftRightIcon,
   PaperAirplaneIcon
 } from '@heroicons/react/24/outline';
@@ -34,22 +33,41 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitStatus('success');
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        console.error('Error:', result.error);
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
       
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus(null), 3000);
-    }, 1000);
+      // Reset status after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+    }
   };
 
   const contactInfo = [
@@ -57,48 +75,26 @@ export default function Contact() {
       icon: <MapPinIcon className="h-6 w-6" />,
       title: "Visit Our Location",
       details: [
-        "123 Spice Street",
-        "Flavor City, FC 12345",
-        "United States"
+        "217/B,1",
+        "Baduwatta",
+        "Eheliyagoda"
       ]
     },
     {
       icon: <PhoneIcon className="h-6 w-6" />,
       title: "Call Us",
       details: [
-        "+1 (555) 123-SPICE",
-        "+1 (555) 123-7742",
-        "Toll-free: 1-800-SPICES"
+        "077 9201422",
+        "072 0484945"
       ]
     },
     {
       icon: <EnvelopeIcon className="h-6 w-6" />,
       title: "Email Us",
       details: [
-        "info@spiceworld.com",
-        "orders@spiceworld.com",
-        "support@spiceworld.com"
+        "moonsproductsc@gmail.com"
       ]
     },
-    {
-      icon: <ClockIcon className="h-6 w-6" />,
-      title: "Business Hours",
-      details: [
-        "Monday - Friday: 9:00 AM - 6:00 PM",
-        "Saturday: 9:00 AM - 4:00 PM",
-        "Sunday: Closed"
-      ]
-    }
-  ];
-
-  const businessHours = [
-    { day: "Monday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Tuesday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Wednesday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Thursday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "9:00 AM - 4:00 PM" },
-    { day: "Sunday", hours: "Closed" }
   ];
 
   return (
@@ -137,9 +133,35 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
                 >
-                  <p className="text-green-800 font-medium">
-                    Thank you! Your message has been sent successfully. We'll get back to you soon.
-                  </p>
+                  <div className="flex items-center">
+                    <div className="text-green-600 mr-3">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="text-green-800 font-medium">
+                      Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg"
+                >
+                  <div className="flex items-center">
+                    <div className="text-red-600 mr-3">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="text-red-800 font-medium">
+                      Sorry, there was an error sending your message. Please try again or contact us directly.
+                    </p>
+                  </div>
                 </div>
               )}
 
@@ -322,31 +344,6 @@ export default function Contact() {
             </div>
 
             {/* Business Hours Detail */}
-            <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
-            >
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Business Hours</h3>
-              <div className="space-y-2">
-                {businessHours.map((schedule, index) => (
-                  <div key={index} className="flex justify-between items-center py-1">
-                    <span className="text-gray-600">{schedule.day}</span>
-                    <span className={`font-medium ${
-                      schedule.hours === 'Closed' ? 'text-red-500' : 'text-gray-900'
-                    }`}>
-                      {schedule.hours}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 p-3 bg-amber-50 rounded-lg">
-                <p className="text-sm text-amber-800">
-                  <strong>Note:</strong> We respond to all inquiries within 24 hours during business days.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
