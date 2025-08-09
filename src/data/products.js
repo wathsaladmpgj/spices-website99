@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    name: "Organic Turmeric Powder",
+    name: "Chilli Powder",
     category: "chilli",
     price: 12.99,
     originalPrice: 15.99,
@@ -15,16 +15,15 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 8.99 },
-      { weight: "100g", price: 12.99 },
-      { weight: "250g", price: 24.99 },
-      { weight: "500g", price: 39.99 }
+      { weight: "110g", price: 8.99 },
+      { weight: "275g", price: 12.99 },
+      { weight: "540g", price: 24.99 }
     ]
   },
   {
     id: 2,
-    name: "Himalayan Pink Salt",
-    category: "salt",
+    name: "Chilli Flakes",
+    category: "chilli",
     price: 8.99,
     originalPrice: null,
     rating: 4.8,
@@ -38,15 +37,14 @@ export const products = [
     inStock: true,
     weightOptions: [
       { weight: "100g", price: 8.99 },
-      { weight: "250g", price: 16.99 },
-      { weight: "500g", price: 28.99 },
-      { weight: "1kg", price: 45.99 }
+      { weight: "275g", price: 16.99 },
+      { weight: "540g", price: 28.99 }
     ]
   },
   {
     id: 3,
-    name: "Garam Masala Blend",
-    category: "blends",
+    name: "Curry Powder",
+    category: "curry",
     price: 15.99,
     originalPrice: null,
     rating: 5.0,
@@ -59,15 +57,15 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 12.99 },
-      { weight: "100g", price: 15.99 },
-      { weight: "200g", price: 28.99 }
+      { weight: "100g", price: 12.99 },
+      { weight: "250g", price: 15.99 },
+      { weight: "500g", price: 28.99 }
     ]
   },
   {
     id: 4,
-    name: "Ceylon Cinnamon Sticks",
-    category: "whole",
+    name: "Meat Curry Masala",
+    category: "curry",
     price: 18.99,
     originalPrice: 22.99,
     rating: 4.7,
@@ -80,15 +78,16 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 15.99 },
-      { weight: "100g", price: 18.99 },
-      { weight: "200g", price: 32.99 }
+      { weight: "250g", price: 15.99 },
+      { weight: "620g", price: 18.99 },
+      { weight: "1220g", price: 32.99 },
+      { weight: "2400g", price: 32.99 }
     ]
   },
   {
     id: 5,
-    name: "Smoked Paprika",
-    category: "ground",
+    name: "Biriyani Masala",
+    category: "curry",
     price: 11.99,
     originalPrice: null,
     rating: 4.6,
@@ -101,15 +100,16 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "75g", price: 11.99 },
-      { weight: "150g", price: 19.99 },
-      { weight: "300g", price: 35.99 }
+      { weight: "450g", price: 11.99 },
+      { weight: "1100g", price: 19.99 },
+      { weight: "2100g", price: 35.99 },
+      { weight: "4000g", price: 35.99 }
     ]
   },
   {
     id: 6,
-    name: "Black Peppercorns",
-    category: "whole",
+    name: "Fish Curry Masala",
+    category: "curry",
     price: 14.99,
     originalPrice: null,
     rating: 4.8,
@@ -122,15 +122,13 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 14.99 },
-      { weight: "200g", price: 26.99 },
-      { weight: "500g", price: 59.99 }
+      { weight: "100g", price: 14.99 }
     ]
   },
   {
     id: 7,
-    name: "Mediterranean Herb Blend",
-    category: "blends",
+    name: "BBQ Masala",
+    category: "curry",
     price: 13.99,
     originalPrice: 16.99,
     rating: 4.5,
@@ -143,14 +141,12 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 10.99 },
-      { weight: "100g", price: 13.99 },
-      { weight: "200g", price: 24.99 }
+      { weight: "50g", price: 10.99 }
     ]
   },
   {
     id: 8,
-    name: "Star Anise Pods",
+    name: "Black Pepper",
     category: "whole",
     price: 16.99,
     originalPrice: null,
@@ -164,15 +160,17 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 16.99 },
-      { weight: "100g", price: 29.99 },
-      { weight: "200g", price: 54.99 }
+      { weight: "150g", price: 16.99 },
+      { weight: "300g", price: 29.99 },
+      { weight: "700g", price: 54.99 },
+      { weight: "1400g", price: 64.99 },
+      { weight: "2700g", price: 74.99 },
     ]
   },
   {
     id: 9,
-    name: "Curry Powder",
-    category: "blends",
+    name: "Cumin Seed",
+    category: "whole",
     price: 12.49,
     originalPrice: null,
     rating: 4.7,
@@ -185,14 +183,11 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "75g", price: 12.49 },
-      { weight: "150g", price: 21.99 },
-      { weight: "300g", price: 39.99 }
     ]
   },
   {
     id: 10,
-    name: "Vanilla Beans",
+    name: "Fennel Seed",
     category: "whole",
     price: 24.99,
     originalPrice: 29.99,
@@ -206,15 +201,12 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "2 beans", price: 24.99 },
-      { weight: "5 beans", price: 54.99 },
-      { weight: "10 beans", price: 99.99 }
     ]
   },
   {
     id: 11,
-    name: "Chili Powder",
-    category: "ground",
+    name: "Cardamom",
+    category: "whole",
     price: 9.99,
     originalPrice: null,
     rating: 4.3,
@@ -227,14 +219,11 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 9.99 },
-      { weight: "250g", price: 19.99 },
-      { weight: "500g", price: 34.99 }
     ]
   },
   {
     id: 12,
-    name: "Cardamom Pods",
+    name: "Cinnamon",
     category: "whole",
     price: 21.99,
     originalPrice: 25.99,
@@ -248,9 +237,151 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 21.99 },
-      { weight: "100g", price: 39.99 },
-      { weight: "200g", price: 69.99 }
+    ]
+  },
+  {
+    id: 13,
+    name: "Clove",
+    category: "whole",
+    price: 21.99,
+    originalPrice: 25.99,
+    rating: 4.8,
+    reviews: 73,
+    image: "home_card3.jpg",
+    description: "Aromatic green cardamom pods with sweet, floral notes",
+    detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
+    origin: "Guatemala",
+    isOrganic: true,
+    isBestseller: false,
+    inStock: true,
+    weightOptions: [
+    ]
+  },
+  {
+    id: 14,
+    name: "Bay Leaf",
+    category: "whole",
+    price: 21.99,
+    originalPrice: 25.99,
+    rating: 4.8,
+    reviews: 73,
+    image: "home_card3.jpg",
+    description: "Aromatic green cardamom pods with sweet, floral notes",
+    detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
+    origin: "Guatemala",
+    isOrganic: true,
+    isBestseller: false,
+    inStock: true,
+    weightOptions: [
+    ]
+  },
+  {
+    id: 15,
+    name: "Black Paper Powder",
+    category: "spice",
+    price: 21.99,
+    originalPrice: 25.99,
+    rating: 4.8,
+    reviews: 73,
+    image: "home_card3.jpg",
+    description: "Aromatic green cardamom pods with sweet, floral notes",
+    detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
+    origin: "Guatemala",
+    isOrganic: true,
+    isBestseller: false,
+    inStock: true,
+    weightOptions: [
+      { weight: "320g", price: 21.99 },
+      { weight: "750g", price: 39.99 },
+      { weight: "1450g", price: 69.99 },
+      { weight: "2800g", price: 69.99 }
+    ]
+  },
+  {
+    id: 16,
+    name: "Turmeric Powder",
+    category: "spice",
+    price: 21.99,
+    originalPrice: 25.99,
+    rating: 4.8,
+    reviews: 73,
+    image: "home_card3.jpg",
+    description: "Aromatic green cardamom pods with sweet, floral notes",
+    detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
+    origin: "Guatemala",
+    isOrganic: true,
+    isBestseller: false,
+    inStock: true,
+    weightOptions: [
+      { weight: "300g", price: 21.99 },
+      { weight: "730g", price: 39.99 },
+      { weight: "1430g", price: 69.99 },
+      { weight: "2800g", price: 69.99 }
+    ]
+  },
+  {
+    id: 17,
+    name: "Cumin Powder",
+    category: "spice",
+    price: 21.99,
+    originalPrice: 25.99,
+    rating: 4.8,
+    reviews: 73,
+    image: "home_card3.jpg",
+    description: "Aromatic green cardamom pods with sweet, floral notes",
+    detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
+    origin: "Guatemala",
+    isOrganic: true,
+    isBestseller: false,
+    inStock: true,
+    weightOptions: [
+      { weight: "220g", price: 21.99 },
+      { weight: "500g", price: 39.99 },
+      { weight: "1000g", price: 69.99 },
+      { weight: "1800g", price: 69.99 }
+    ]
+  },
+  {
+    id: 18,
+    name: "Thalawakelle Tea Powder",
+    category: "tea",
+    price: 21.99,
+    originalPrice: 25.99,
+    rating: 4.8,
+    reviews: 73,
+    image: "home_card3.jpg",
+    description: "Aromatic green cardamom pods with sweet, floral notes",
+    detailedDescription: "ndian sweets, and Scandinavian baking.",
+    origin: "Guatemala",
+    isOrganic: true,
+    isBestseller: false,
+    inStock: true,
+    weightOptions: [
+      { weight: "200g", price: 21.99 },
+      { weight: "500g", price: 39.99 },
+      { weight: "900g", price: 69.99 },
+      { weight: "1700g", price: 69.99 }
+    ]
+  },
+  {
+    id: 19,
+    name: "Black Coffe",
+    category: "tea",
+    price: 21.99,
+    originalPrice: 25.99,
+    rating: 4.8,
+    reviews: 73,
+    image: "home_card3.jpg",
+    description: "Aromatic green cardamom pods with sweet, floral notes",
+    detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
+    origin: "Guatemala",
+    isOrganic: true,
+    isBestseller: false,
+    inStock: true,
+    weightOptions: [
+      { weight: "320g", price: 21.99 },
+      { weight: "1550g", price: 39.99 },
+      { weight: "2700g", price: 69.99 }
     ]
   },
 ];

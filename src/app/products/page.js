@@ -260,11 +260,6 @@ export default function Products() {
                 {Math.min(startIndex + itemsPerPage, filteredProducts.length)}{" "}
                 of {filteredProducts.length} products
               </p>
-              
-              {/* Debug info - remove in production */}
-              <div className="text-xs text-gray-400">
-                Modal: {isModalOpen ? "Open" : "Closed"} | Selected: {selectedProduct?.name || "None"}
-              </div>
             </div>
 
             {/* Products Grid */}

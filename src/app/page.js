@@ -46,7 +46,7 @@ export default function Home() {
   const featuredProducts = [
     {
     id: 1,
-    name: "Organic Turmeric Powder",
+    name: "Curry Powder",
     category: "chilli",
     price: 12.99,
     originalPrice: 15.99,
@@ -68,7 +68,7 @@ export default function Home() {
   },
     {
     id: 2,
-    name: "Himalayan Pink Salt",
+    name: "Meat Curry Masala",
     category: "salt",
     price: 8.99,
     originalPrice: null,
@@ -90,7 +90,7 @@ export default function Home() {
   },
     {
     id: 3,
-    name: "Garam Masala Blend",
+    name: "Biriyani Masala",
     category: "blends",
     price: 15.99,
     originalPrice: null,
@@ -111,7 +111,7 @@ export default function Home() {
   },
   {
     id: 4,
-    name: "Ceylon Cinnamon Sticks",
+    name: "Fish Curry Masala",
     category: "whole",
     price: 18.99,
     originalPrice: 22.99,
