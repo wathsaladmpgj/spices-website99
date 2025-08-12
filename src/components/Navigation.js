@@ -15,7 +15,7 @@ const Navigation = () => {
     { name: 'Products', href: '/products' },
     { name: 'Contact', href: '/contact' },
     { name: 'Distributors', href: '/distributors' },
-    { name: 'Farmer Support', href: '/farmerSupport' },
+    { name: 'Farmer Support', href: '/farmer' },
   ];
 
   const toggleMenu = useCallback(() => {
@@ -32,10 +32,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div>
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-yellow to-primary-green rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
+            <Link href="/" className="flex items-center space-x-3">
+              {/* Logo Image */}
+              <img
+                src="/logo.jpg" // Replace with /logo.png if you have a logo file
+                alt="Logo"
+                className="w-17 h-17 rounded-full object-cover border-2 border-yellow-300 shadow"
+              />
               <span className="text-xl font-bold text-gray-800">MooN's Products</span>
             </Link>
           </div>

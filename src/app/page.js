@@ -226,7 +226,7 @@ Please let me know about availability and delivery options.`;
             backgroundImage: "url('/home_card2.jpg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-50/80 via-white/70 to-green-50/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-10/10 via-white/70 to-green-50/80"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
