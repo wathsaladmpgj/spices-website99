@@ -15,9 +15,10 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "110g", price: 8.99 },
-      { weight: "275g", price: 12.99 },
-      { weight: "540g", price: 24.99 }
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -36,9 +37,10 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 8.99 },
-      { weight: "275g", price: 16.99 },
-      { weight: "540g", price: 28.99 }
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -57,9 +59,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 12.99 },
-      { weight: "250g", price: 15.99 },
-      { weight: "500g", price: 28.99 }
+      { weight: "100g", price: 100.00, originalPrice: 130.00 },
+      { weight: "250g", price: 250.00, originalPrice: 130.00  },
+      { weight: "500g", price: 500.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1000.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -78,10 +81,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "250g", price: 15.99 },
-      { weight: "620g", price: 18.99 },
-      { weight: "1220g", price: 32.99 },
-      { weight: "2400g", price: 32.99 }
+      { weight: "100g", price: 250.00, originalPrice: 130.00 },
+      { weight: "250g", price: 620.00, originalPrice: 130.00  },
+      { weight: "500g", price: 1220.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 2400.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -100,10 +103,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "450g", price: 11.99 },
-      { weight: "1100g", price: 19.99 },
-      { weight: "2100g", price: 35.99 },
-      { weight: "4000g", price: 35.99 }
+      { weight: "100g", price: 450.00, originalPrice: 130.00 },
+      { weight: "250g", price: 1100.00, originalPrice: 130.00  },
+      { weight: "500g", price: 2100.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 4000.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -122,7 +125,10 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 14.99 }
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -141,7 +147,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 10.99 }
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -160,11 +169,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "150g", price: 16.99 },
-      { weight: "300g", price: 29.99 },
-      { weight: "700g", price: 54.99 },
-      { weight: "1400g", price: 64.99 },
-      { weight: "2700g", price: 74.99 },
+      { weight: "100g", price: 300.00, originalPrice: 130.00 },
+      { weight: "250g", price: 700.00, originalPrice: 130.00  },
+      { weight: "500g", price: 1400.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 2700.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -183,6 +191,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -201,6 +213,10 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -219,6 +235,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -237,6 +257,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -255,6 +279,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -273,6 +301,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
+      { weight: "100g", price: 110.00, originalPrice: 130.00 },
+      { weight: "250g", price: 275.00, originalPrice: 130.00  },
+      { weight: "500g", price: 540.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -291,10 +323,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "320g", price: 21.99 },
-      { weight: "750g", price: 39.99 },
-      { weight: "1450g", price: 69.99 },
-      { weight: "2800g", price: 69.99 }
+      { weight: "100g", price: 320.00, originalPrice: 130.00 },
+      { weight: "250g", price: 750.00, originalPrice: 130.00  },
+      { weight: "500g", price: 1450.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 2800.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -313,10 +345,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "300g", price: 21.99 },
-      { weight: "730g", price: 39.99 },
-      { weight: "1430g", price: 69.99 },
-      { weight: "2800g", price: 69.99 }
+      { weight: "100g", price: 300.00, originalPrice: 130.00 },
+      { weight: "250g", price: 730.00, originalPrice: 130.00  },
+      { weight: "500g", price: 1430.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 2800.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -335,10 +367,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "220g", price: 21.99 },
-      { weight: "500g", price: 39.99 },
-      { weight: "1000g", price: 69.99 },
-      { weight: "1800g", price: 69.99 }
+      { weight: "100g", price: 220.00, originalPrice: 130.00 },
+      { weight: "250g", price: 500.00, originalPrice: 130.00  },
+      { weight: "500g", price: 1000.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1800.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -357,10 +389,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "200g", price: 21.99 },
-      { weight: "500g", price: 39.99 },
-      { weight: "900g", price: 69.99 },
-      { weight: "1700g", price: 69.99 }
+      { weight: "100g", price: 200.00, originalPrice: 130.00 },
+      { weight: "250g", price: 500.00, originalPrice: 130.00  },
+      { weight: "500g", price: 900.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 1700.00, originalPrice: 130.00  },
     ]
   },
   {
@@ -379,9 +411,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "320g", price: 21.99 },
-      { weight: "1550g", price: 39.99 },
-      { weight: "2700g", price: 69.99 }
+      { weight: "100g", price: 320.00, originalPrice: 130.00 },
+      { weight: "250g", price: 750.00, originalPrice: 130.00  },
+      { weight: "500g", price: 1500.00, originalPrice: 130.00  },
+      { weight: "1kg", price: 2700.00, originalPrice: 130.00  },
     ]
   },
 ];
@@ -391,6 +424,6 @@ export const categories = [
   { value: "chilli", label: "Chilli Product" },
   { value: "curry", label: "Curry & Masala Powders" },
   { value: "whole", label: "Whole Spices" },
-  { value: "spice", label: "Spice Powers" },
+  { value: "spice", label: "Spice Powders" },
   { value: "tea", label: "Tea & Coffee" },
 ];

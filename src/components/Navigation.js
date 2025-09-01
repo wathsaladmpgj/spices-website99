@@ -35,11 +35,10 @@ const Navigation = () => {
             <Link href="/" className="flex items-center space-x-3">
               {/* Logo Image */}
               <img
-                src="/logo.jpg" // Replace with /logo.png if you have a logo file
+                src="/logoo.jpg" // Replace with /logo.png if you have a logo file
                 alt="Logo"
-                className="w-17 h-17 rounded-full object-cover border-2 border-yellow-300 shadow"
+                className="w-30 h-14"
               />
-              <span className="text-xl font-bold text-gray-800">MooN's Products</span>
             </Link>
           </div>
 

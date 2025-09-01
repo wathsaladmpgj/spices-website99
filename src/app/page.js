@@ -48,8 +48,8 @@ export default function Home() {
     id: 1,
     name: "Curry Powder",
     category: "chilli",
-    price: 12.99,
-    originalPrice: 15.99,
+    price: 100,
+    originalPrice: 120,
     rating: 4.9,
     reviews: 127,
     image: "home_card2.jpg",
@@ -60,10 +60,10 @@ export default function Home() {
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 8.99 },
-      { weight: "100g", price: 12.99 },
-      { weight: "250g", price: 24.99 },
-      { weight: "500g", price: 39.99 }
+      { weight: "100g", price: 100 },
+      { weight: "250g", price: 250 },
+      { weight: "500g", price: 500 },
+      { weight: "1kg", price: 1000 }
     ]
   },
     {
@@ -159,15 +159,12 @@ export default function Home() {
   const whyChooseUs = [
     "Strong partnerships with trusted farmers across Sri Lanka",
     "Strict quality control to ensure freshness and purity",
-    "Sustainable and eco-friendly packaging practices",
-    "Expert culinary guidance and recipes",
-    "Competitive wholesale pricing",
-    "24/7 customer support",
+    "World class Sri Lankan spices, sustainably grown, at reasonable prices.",
   ];
 
   // Function to calculate price based on weight
   const getWeightPrice = (weight) => {
-    const basePrice = parseFloat(selectedProduct?.price?.replace('$', '') || 0);
+    const basePrice = parseFloat(selectedProduct?.price?.replace('Rs', '') || 0);
     const weightMultipliers = {
       '50g': 1,
       '100g': 1.8,
@@ -209,7 +206,7 @@ ${selectedProduct.isOrganic ? 'Organic: Yes' : ''}
 
 Please let me know about availability and delivery options.`;
 
-    const phoneNumber = "+94711519402"; // Replace with actual WhatsApp number
+    const phoneNumber = "+94720484945"; // Replace with actual WhatsApp number
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -316,10 +313,7 @@ Please let me know about availability and delivery options.`;
                 <span className="text-green-600">5+ Years</span> of Excellence
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Since 2019, SpiceWorld has been proudly delivering authentic Sri
-                Lankan spices straight from local farms to your kitchen. We're
-                passionate about preserving traditional flavors while
-                maintaining the highest quality standards.
+                Since 2019, SpiceWorld has been lovingly bringing the true taste of Sri Lanka from our farmers' hands to your kitchen. Every spice is chosen with care just like a mother selecting the freshest ingredients for her family. With every sprinkle, you'll taste tradition, feel the warmth of home cooking, and enjoy the pure, authentic flavors you can trust.
               </p>
               <ul className="space-y-3 mb-8">
                 {whyChooseUs.slice(0, 3).map((reason, index) => (
@@ -505,7 +499,7 @@ Please let me know about availability and delivery options.`;
                     }`}
                   >
                     <div className="font-semibold text-lg">{option.weight}</div>
-                    <div className="text-sm text-gray-600">${option.price.toFixed(2)}</div>
+                    <div className="text-sm text-gray-600">Rs{option.price.toFixed(2)}</div>
                   </button>
                 ))}
               </div>
@@ -662,17 +656,48 @@ Please let me know about availability and delivery options.`;
               Follow us for recipes & cooking tips!
             </h3>
             <div className="flex space-x-4">
-              {["📘", "📷", "🐦", "💼"].map((icon, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200"
-                >
-                  <span className="text-xl">{icon}</span>
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://wa.me/+94720484945"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200 text-green-600"
+              >
+                <img
+                  src="/logoo.jpg"
+                  alt="WhatsApp"
+                  className="w-full h-full object-cove rounded-full"
+                />  
+              </motion.a>
+              <motion.a
+                href="https://www.facebook.com/share/15ackMYNaw/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200 text-blue-600"
+              >
+                <img
+                  src="/logoo.jpg"
+                  alt="WhatsApp"
+                  className="w-full h-full object-cove rounded-full"
+                /> 
+              </motion.a>
+              <motion.a
+                href="https://www.instagram.com/moons_products13?igsh=YzljYTk1ODg3Zg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200 text-pink-600"
+              >
+                <img
+                  src="/logoo.jpg"
+                  alt="WhatsApp"
+                  className="w-full h-full object-cove rounded-full"
+                /> 
+              </motion.a>
             </div>
           </div>
         </div>

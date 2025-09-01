@@ -18,7 +18,7 @@ export default function About() {
   const stats = [
     { number: "5+", label: "Years of Excellence" },
     { number: "15+", label: "Farmer Suport" },
-    { number: "7+", label: "Distributors" },
+    { number: "20+", label: "Our Products" },
     { number: "2K+", label: "Happy Customers" },
   ];
 
@@ -88,7 +88,7 @@ export default function About() {
               About <span className="text-amber-400">SpiceWorld</span>
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-              Bringing the world's finest spices to your kitchen since 1985. Our
+              Bringing the world's finest spices to your kitchen since 2019. Our
               passion for quality and authentic flavors drives everything we do.
             </p>
           </motion.div>
@@ -183,7 +183,7 @@ export default function About() {
                   to serve both home cooks and professional chefs worldwide.
                 </p>
                 <p>
-                  Today, we're proud to offer over 15+ premium spices sourced
+                  Today, we're proud to offer over 20+ premium spices sourced
                   from more than 20 cities, each one carefully selected and
                   tested to meet our exacting standards for freshness, purity,
                   and flavor.
@@ -200,7 +200,7 @@ export default function About() {
             >
               <div className="aspect-square bg-gradient-to-br from-amber-400 to-green-500 rounded-2xl overflow-hidden">
                 <img
-                  src="our_store.jpg"
+                  src="/aboutimg.jpg"
                   alt="SpiceWorld story - traditional spice shop"
                   className="w-full h-full object-cover"
                 />
@@ -358,7 +358,7 @@ export default function About() {
           >
             <div className="aspect-square bg-gradient-to-br from-green-400 to-green-600 rounded-2xl overflow-hidden">
               <img
-            src="sustanability.jpg"
+            src="susImpac.jpg"
             alt="Sustainable farming practices and eco-friendly initiatives"
             className="w-full h-full object-cover"
               />

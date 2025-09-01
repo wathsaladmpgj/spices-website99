@@ -98,6 +98,7 @@ export default function Products() {
         console.log("Setting weight options:", product.weightOptions[0]);
         setSelectedWeight(product.weightOptions[0].weight);
         setSelectedPrice(product.weightOptions[0].price);
+        setSelectedPrice(product.weightOptions[0].originalPrice);
       } else {
         console.log("No weight options, using defaults");
         setSelectedWeight("100g"); // Default weight
@@ -497,7 +498,7 @@ export default function Products() {
                         {selectedProduct.weightOptions.map((option) => (
                           <button
                             key={option.weight}
-                            onClick={() => handleWeightChange(option.weight, option.price)}
+                            onClick={() => handleWeightChange(option.weight, option.price,option.originalPrice)}
                             className={`p-3 border-2 rounded-lg text-center transition-colors ${
                               selectedWeight === option.weight
                                 ? "border-green-500 bg-green-50 text-green-700"
@@ -505,7 +506,10 @@ export default function Products() {
                             }`}
                           >
                             <div className="font-medium">{option.weight}</div>
-                            <div className="text-sm text-gray-600">Rs:{option.price}</div>
+                            <div className="flex gap-3">
+                              <div className="text-sm text-gray-600">Rs:{option.price}</div>
+                              <div className="text-sm text-gray-500 line-through">Rs:{option.originalPrice}</div>
+                            </div>
                           </button>
                         ))}
                       </div>
