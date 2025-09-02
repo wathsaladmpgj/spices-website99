@@ -7,7 +7,7 @@ export const products = [
     originalPrice: 15.99,
     rating: 4.9,
     reviews: 127,
-    image: "home_card2.jpg",
+    image: "ChilliPowder.jpg",
     description: "Premium golden turmeric with anti-inflammatory properties",
     detailedDescription: "Our premium organic turmeric powder is sourced from the fertile soils of India. Rich in curcumin, this golden spice offers powerful anti-inflammatory and antioxidant properties. Perfect for curries, golden milk, and health-conscious cooking.",
     origin: "India",
@@ -16,9 +16,9 @@ export const products = [
     inStock: true,
     weightOptions: [
       { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "250g", price: 275.00, originalPrice: 290.00  },
+      { weight: "500g", price: 540.00, originalPrice: 570.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 1110.00  },
     ]
   },
   {
@@ -29,7 +29,7 @@ export const products = [
     originalPrice: null,
     rating: 4.8,
     reviews: 203,
-    image: "home_card3.jpg",
+    image: "ChilliFlakes.jpg",
     description: "Pure, unrefined salt from the pristine Himalayan mountains",
     detailedDescription: "Harvested from ancient sea salt deposits in the Himalayan mountains, this pink salt is rich in minerals and offers a subtle, complex flavor. Perfect for finishing dishes or everyday cooking.",
     origin: "Pakistan",
@@ -38,9 +38,9 @@ export const products = [
     inStock: true,
     weightOptions: [
       { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "250g", price: 275.00, originalPrice: 290.00  },
+      { weight: "500g", price: 540.00, originalPrice: 570.00  },
+      { weight: "1kg", price: 1050.00, originalPrice: 1100.00  },
     ]
   },
   {
@@ -51,7 +51,7 @@ export const products = [
     originalPrice: null,
     rating: 5.0,
     reviews: 89,
-    image: "home_card1.jpg",
+    image: "CurryPowder.jpg",
     description: "Authentic Indian spice blend with complex aromatic flavors",
     detailedDescription: "A traditional blend of warming spices including cardamom, cinnamon, cloves, and black pepper. This aromatic mixture adds depth and complexity to curries, rice dishes, and roasted meats.",
     origin: "India",
@@ -60,9 +60,9 @@ export const products = [
     inStock: true,
     weightOptions: [
       { weight: "100g", price: 100.00, originalPrice: 130.00 },
-      { weight: "250g", price: 250.00, originalPrice: 130.00  },
-      { weight: "500g", price: 500.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1000.00, originalPrice: 130.00  },
+      { weight: "250g", price: 250.00, originalPrice: 280.00  },
+      { weight: "500g", price: 500.00, originalPrice: 540.00  },
+      { weight: "1kg", price: 999.00, originalPrice: 1050.00  },
     ]
   },
   {
@@ -73,7 +73,7 @@ export const products = [
     originalPrice: 22.99,
     rating: 4.7,
     reviews: 156,
-    image: "home_card2.jpg",
+    image: "MeatCurryMasala.jpg",
     description: "True Ceylon cinnamon with delicate, sweet flavor",
     detailedDescription: "Authentic Ceylon cinnamon sticks from Sri Lanka, known for their delicate, sweet flavor and thin bark. Perfect for infusing teas, mulled wine, or adding to desserts and savory dishes.",
     origin: "Sri Lanka",
@@ -81,10 +81,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 250.00, originalPrice: 130.00 },
-      { weight: "250g", price: 620.00, originalPrice: 130.00  },
-      { weight: "500g", price: 1220.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 2400.00, originalPrice: 130.00  },
+      { weight: "100g", price: 250.00, originalPrice: 270.00 },
+      { weight: "250g", price: 620.00, originalPrice: 700.00  },
+      { weight: "500g", price: 1220.00, originalPrice: 1300.00  },
+      { weight: "1kg", price: 2399.00, originalPrice: 2500.00  },
     ]
   },
   {
@@ -95,7 +95,7 @@ export const products = [
     originalPrice: null,
     rating: 4.6,
     reviews: 94,
-    image: "home_card1.jpg",
+    image: "BiriyaniMasala.jpg",
     description: "Intensely smoky Spanish paprika for authentic flavors",
     detailedDescription: "Traditional Spanish smoked paprika (Pimentón de la Vera) with an intense smoky flavor. Slowly smoked over oak wood fires, this paprika adds depth and complexity to any dish.",
     origin: "Spain",
@@ -103,10 +103,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 450.00, originalPrice: 130.00 },
-      { weight: "250g", price: 1100.00, originalPrice: 130.00  },
-      { weight: "500g", price: 2100.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 4000.00, originalPrice: 130.00  },
+      { weight: "100g", price: 450.00, originalPrice: 470.00 },
+      { weight: "250g", price: 1100.00, originalPrice: 1170.00  },
+      { weight: "500g", price: 2100.00, originalPrice: 2180.00  },
+      { weight: "1kg", price: 3999.00, originalPrice: 4100.00  },
     ]
   },
   {
@@ -117,7 +117,7 @@ export const products = [
     originalPrice: null,
     rating: 4.8,
     reviews: 178,
-    image: "home_card4.jpg",
+    image: "FishCurryMasala.jpg",
     description: "Premium Tellicherry peppercorns with bold, complex heat",
     detailedDescription: "Premium Tellicherry black peppercorns from India's Malabar Coast. These peppercorns offer bold, complex heat with fruity undertones. Perfect for seasoning meats, vegetables, and creating fresh ground pepper.",
     origin: "India",
@@ -125,10 +125,7 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "100g", price: 250.00, originalPrice: 270.00 },
     ]
   },
   {
@@ -139,7 +136,7 @@ export const products = [
     originalPrice: 16.99,
     rating: 4.5,
     reviews: 67,
-    image: "home_card2.jpg",
+    image: "BBQMasala.jpg",
     description: "Classic blend of oregano, thyme, rosemary, and basil",
     detailedDescription: "A classic Mediterranean herb blend featuring oregano, thyme, rosemary, and basil. This aromatic mixture brings the flavors of the Mediterranean to your kitchen, perfect for grilled meats, vegetables, and pasta dishes.",
     origin: "Greece",
@@ -147,10 +144,7 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "35g", price: 199.00, originalPrice: 220.00 },
     ]
   },
   {
@@ -161,7 +155,7 @@ export const products = [
     originalPrice: null,
     rating: 4.4,
     reviews: 45,
-    image: "home_card4.jpg",
+    image: "BlackPepper.jpg",
     description: "Aromatic star-shaped pods with licorice-like flavor",
     detailedDescription: "Beautiful star-shaped pods from China with an intense licorice-like flavor. Essential for Asian cooking, especially Chinese five-spice powder and Vietnamese pho. Also excellent for mulled wine and baking.",
     origin: "China",
@@ -169,10 +163,7 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 300.00, originalPrice: 130.00 },
-      { weight: "250g", price: 700.00, originalPrice: 130.00  },
-      { weight: "500g", price: 1400.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 2700.00, originalPrice: 130.00  },
+      { weight: "100g", price: 270.00, originalPrice: 290.00 },
     ]
   },
   {
@@ -183,7 +174,7 @@ export const products = [
     originalPrice: null,
     rating: 4.7,
     reviews: 112,
-    image: "home_card4.jpg",
+    image: "CuminSeed.jpg",
     description: "Aromatic curry blend perfect for Indian cuisine",
     detailedDescription: "A fragrant blend of turmeric, coriander, cumin, fenugreek, and other aromatic spices. This curry powder brings authentic Indian flavors to your dishes and is perfect for making traditional curries, marinades, and rice dishes.",
     origin: "India",
@@ -191,10 +182,7 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "100g", price: 160.00, originalPrice: 180.00 },
     ]
   },
   {
@@ -205,7 +193,7 @@ export const products = [
     originalPrice: 29.99,
     rating: 4.9,
     reviews: 87,
-    image: "home_card3.jpg",
+    image: "FennelSeed.jpg",
     description: "Premium Madagascar vanilla beans with rich aroma",
     detailedDescription: "Grade A Madagascar vanilla beans with an intense, sweet aroma and complex flavor profile. Perfect for baking, making vanilla extract, or adding to desserts. Each bean is plump and oily, indicating premium quality.",
     origin: "Madagascar",
@@ -213,10 +201,7 @@ export const products = [
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "100g", price: 120.00, originalPrice: 130.00 },
     ]
   },
   {
@@ -227,7 +212,7 @@ export const products = [
     originalPrice: null,
     rating: 4.3,
     reviews: 156,
-    image: "home_card1.jpg",
+    image: "Cardamom.jpg",
     description: "Medium heat chili powder for everyday cooking",
     detailedDescription: "A versatile blend of ground chilies with medium heat level. Perfect for adding warmth and depth to Mexican dishes, barbecue rubs, and everyday cooking. Made from carefully selected dried chilies for consistent flavor.",
     origin: "Mexico",
@@ -235,10 +220,7 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "10g", price: 180.00, originalPrice: 200.00 },
     ]
   },
   {
@@ -249,7 +231,7 @@ export const products = [
     originalPrice: 25.99,
     rating: 4.8,
     reviews: 73,
-    image: "home_card3.jpg",
+    image: "Cinnamon.jpg",
     description: "Aromatic green cardamom pods with sweet, floral notes",
     detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
     origin: "Guatemala",
@@ -257,10 +239,7 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "50g", price: 250.00, originalPrice: 270.00 },
     ]
   },
   {
@@ -271,7 +250,7 @@ export const products = [
     originalPrice: 25.99,
     rating: 4.8,
     reviews: 73,
-    image: "home_card3.jpg",
+    image: "Clove.jpg",
     description: "Aromatic green cardamom pods with sweet, floral notes",
     detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
     origin: "Guatemala",
@@ -279,10 +258,7 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "50g", price: 250.00, originalPrice: 270.00 },
     ]
   },
   {
@@ -293,7 +269,7 @@ export const products = [
     originalPrice: 25.99,
     rating: 4.8,
     reviews: 73,
-    image: "home_card3.jpg",
+    image: "BayLeaf.jpg",
     description: "Aromatic green cardamom pods with sweet, floral notes",
     detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
     origin: "Guatemala",
@@ -301,10 +277,7 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 110.00, originalPrice: 130.00 },
-      { weight: "250g", price: 275.00, originalPrice: 130.00  },
-      { weight: "500g", price: 540.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1050.00, originalPrice: 130.00  },
+      { weight: "10g", price: 80.00, originalPrice: 100.00 },
     ]
   },
   {
@@ -315,7 +288,7 @@ export const products = [
     originalPrice: 25.99,
     rating: 4.8,
     reviews: 73,
-    image: "home_card3.jpg",
+    image: "BlackPaperPowder.jpg",
     description: "Aromatic green cardamom pods with sweet, floral notes",
     detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
     origin: "Guatemala",
@@ -323,10 +296,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 320.00, originalPrice: 130.00 },
-      { weight: "250g", price: 750.00, originalPrice: 130.00  },
-      { weight: "500g", price: 1450.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 2800.00, originalPrice: 130.00  },
+      { weight: "100g", price: 320.00, originalPrice: 350.00 },
+      { weight: "250g", price: 750.00, originalPrice: 790.00  },
+      { weight: "500g", price: 1450.00, originalPrice: 1510.00  },
+      { weight: "1kg", price: 2800.00, originalPrice: 2900.00  },
     ]
   },
   {
@@ -337,7 +310,7 @@ export const products = [
     originalPrice: 25.99,
     rating: 4.8,
     reviews: 73,
-    image: "home_card3.jpg",
+    image: "TurmericPowder.jpg",
     description: "Aromatic green cardamom pods with sweet, floral notes",
     detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
     origin: "Guatemala",
@@ -345,10 +318,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 300.00, originalPrice: 130.00 },
-      { weight: "250g", price: 730.00, originalPrice: 130.00  },
-      { weight: "500g", price: 1430.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 2800.00, originalPrice: 130.00  },
+      { weight: "100g", price: 300.00, originalPrice: 320.00 },
+      { weight: "250g", price: 730.00, originalPrice: 790.00  },
+      { weight: "500g", price: 1430.00, originalPrice: 1510.00  },
+      { weight: "1kg", price: 2800.00, originalPrice: 2900.00  },
     ]
   },
   {
@@ -359,7 +332,7 @@ export const products = [
     originalPrice: 25.99,
     rating: 4.8,
     reviews: 73,
-    image: "home_card3.jpg",
+    image: "CuminPowder.jpg",
     description: "Aromatic green cardamom pods with sweet, floral notes",
     detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
     origin: "Guatemala",
@@ -367,21 +340,21 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 220.00, originalPrice: 130.00 },
-      { weight: "250g", price: 500.00, originalPrice: 130.00  },
-      { weight: "500g", price: 1000.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1800.00, originalPrice: 130.00  },
+      { weight: "100g", price: 220.00, originalPrice: 240.00 },
+      { weight: "250g", price: 500.00, originalPrice: 530.00  },
+      { weight: "500g", price: 1000.00, originalPrice: 1070.00  },
+      { weight: "1kg", price: 1800.00, originalPrice: 1900.00  },
     ]
   },
   {
     id: 18,
-    name: "Thalawakelle Tea Powder",
+    name: "Tea Powder",
     category: "tea",
     price: 21.99,
     originalPrice: 25.99,
     rating: 4.8,
     reviews: 73,
-    image: "home_card3.jpg",
+    image: "TeaPowder.jpg",
     description: "Aromatic green cardamom pods with sweet, floral notes",
     detailedDescription: "ndian sweets, and Scandinavian baking.",
     origin: "Guatemala",
@@ -389,10 +362,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 200.00, originalPrice: 130.00 },
-      { weight: "250g", price: 500.00, originalPrice: 130.00  },
-      { weight: "500g", price: 900.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 1700.00, originalPrice: 130.00  },
+      { weight: "100g", price: 200.00, originalPrice: 220.00 },
+      { weight: "250g", price: 500.00, originalPrice: 550.00  },
+      { weight: "500g", price: 900.00, originalPrice: 970.00  },
+      { weight: "1kg", price: 1700.00, originalPrice: 1800.00  },
     ]
   },
   {
@@ -403,7 +376,7 @@ export const products = [
     originalPrice: 25.99,
     rating: 4.8,
     reviews: 73,
-    image: "home_card3.jpg",
+    image: "BlackCoffe.jpg",
     description: "Aromatic green cardamom pods with sweet, floral notes",
     detailedDescription: "Premium green cardamom pods from Guatemala with an intensely aromatic, sweet, and floral flavor. Known as the 'Queen of Spices', cardamom is essential for chai, Indian sweets, and Scandinavian baking.",
     origin: "Guatemala",
@@ -411,10 +384,10 @@ export const products = [
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 320.00, originalPrice: 130.00 },
-      { weight: "250g", price: 750.00, originalPrice: 130.00  },
-      { weight: "500g", price: 1500.00, originalPrice: 130.00  },
-      { weight: "1kg", price: 2700.00, originalPrice: 130.00  },
+      { weight: "100g", price: 320.00, originalPrice: 340.00 },
+      { weight: "250g", price: 750.00, originalPrice: 790.00  },
+      { weight: "500g", price: 1500.00, originalPrice: 1600.00  },
+      { weight: "1kg", price: 2700.00, originalPrice: 2900.00  },
     ]
   },
 ];

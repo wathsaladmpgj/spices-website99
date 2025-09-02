@@ -52,15 +52,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-300">
                 <MapPinIcon className="h-4 w-4 text-primary-yellow" />
-                <span>123 Spice Street, Flavor City, FC 12345</span>
+                <span>217/B,1,Baduwatta,Eheliyagoda</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-300">
                 <PhoneIcon className="h-4 w-4 text-primary-yellow" />
-                <span>+1 (555) 123-SPICE</span>
+                <span>077 9201422</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-300">
                 <EnvelopeIcon className="h-4 w-4 text-primary-yellow" />
-                <span>info@spiceworld.com</span>
+                <span>moonsproductsc@gmail.com</span>
               </div>
             </div>
           </div>
