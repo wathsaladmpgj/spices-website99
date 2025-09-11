@@ -52,7 +52,7 @@ export default function Home() {
     originalPrice: 120,
     rating: 4.9,
     reviews: 127,
-    image: "home_card2.jpg",
+    image: "CurryPowder.jpg",
     description: "Premium golden turmeric with anti-inflammatory properties",
     detailedDescription: "Our premium organic turmeric powder is sourced from the fertile soils of India. Rich in curcumin, this golden spice offers powerful anti-inflammatory and antioxidant properties. Perfect for curries, golden milk, and health-conscious cooking.",
     origin: "India",
@@ -60,21 +60,21 @@ export default function Home() {
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 100 },
-      { weight: "250g", price: 250 },
-      { weight: "500g", price: 500 },
-      { weight: "1kg", price: 1000 }
+      { weight: "100g", price: 100.00},
+      { weight: "250g", price: 250.00},
+      { weight: "500g", price: 500.00},
+      { weight: "1kg", price: 999.00},
     ]
   },
     {
     id: 2,
     name: "Meat Curry Masala",
     category: "salt",
-    price: 8.99,
+    price: 250,
     originalPrice: null,
     rating: 4.8,
     reviews: 203,
-    image: "home_card3.jpg",
+    image: "MeatCurryMasala.jpg",
     description: "Pure, unrefined salt from the pristine Himalayan mountains",
     detailedDescription: "Harvested from ancient sea salt deposits in the Himalayan mountains, this pink salt is rich in minerals and offers a subtle, complex flavor. Perfect for finishing dishes or everyday cooking.",
     origin: "Pakistan",
@@ -82,21 +82,21 @@ export default function Home() {
     isBestseller: true,
     inStock: true,
     weightOptions: [
-      { weight: "100g", price: 8.99 },
-      { weight: "250g", price: 16.99 },
-      { weight: "500g", price: 28.99 },
-      { weight: "1kg", price: 45.99 }
+      { weight: "100g", price: 250.00 },
+      { weight: "250g", price: 620.00},
+      { weight: "500g", price: 1220.00},
+      { weight: "1kg", price: 2399.00 }
     ]
   },
     {
     id: 3,
     name: "Biriyani Masala",
     category: "blends",
-    price: 15.99,
+    price: 450,
     originalPrice: null,
     rating: 5.0,
     reviews: 89,
-    image: "home_card1.jpg",
+    image: "BiriyaniMasala.jpg",
     description: "Authentic Indian spice blend with complex aromatic flavors",
     detailedDescription: "A traditional blend of warming spices including cardamom, cinnamon, cloves, and black pepper. This aromatic mixture adds depth and complexity to curries, rice dishes, and roasted meats.",
     origin: "India",
@@ -104,20 +104,21 @@ export default function Home() {
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 12.99 },
-      { weight: "100g", price: 15.99 },
-      { weight: "200g", price: 28.99 }
+      { weight: "100g", price: 450.00},
+      { weight: "250g", price: 1100.00 },
+      { weight: "500g", price: 2100.00 },
+      { weight: "1kg", price: 3999.00 },
     ]
   },
   {
     id: 4,
     name: "Fish Curry Masala",
     category: "whole",
-    price: 18.99,
+    price: 250,
     originalPrice: 22.99,
     rating: 4.7,
     reviews: 156,
-    image: "home_card2.jpg",
+    image: "FishCurryMasala.jpg",
     description: "True Ceylon cinnamon with delicate, sweet flavor",
     detailedDescription: "Authentic Ceylon cinnamon sticks from Sri Lanka, known for their delicate, sweet flavor and thin bark. Perfect for infusing teas, mulled wine, or adding to desserts and savory dishes.",
     origin: "Sri Lanka",
@@ -125,31 +126,29 @@ export default function Home() {
     isBestseller: false,
     inStock: true,
     weightOptions: [
-      { weight: "50g", price: 15.99 },
-      { weight: "100g", price: 18.99 },
-      { weight: "200g", price: 32.99 }
+      { weight: "100g", price: 250.00},
     ]
   },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Home Chef",
+      name: "MHD Shafy",
+      role: "Manager of SN store",
       content:
         "The quality of spices from SpiceWorld is exceptional. My dishes have never tasted better!",
       rating: 5,
     },
     {
-      name: "Chef Martinez",
-      role: "Restaurant Owner",
+      name: "Araliya Super Stores",
+      role: "Owner",
       content:
         "We've been using SpiceWorld for our restaurant for 3 years. Consistent quality every time.",
       rating: 5,
     },
     {
-      name: "Emma Chen",
-      role: "Food Blogger",
+      name: "City Hotel",
+      role: "Senior Chef",
       content:
         "Their organic collection is amazing. You can really taste the difference in freshness.",
       rating: 5,
@@ -665,10 +664,10 @@ Please let me know about availability and delivery options.`;
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200 text-green-600"
               >
                 <img
-                  src="/logoo.jpg"
+                  src="/whatsapp.png"
                   alt="WhatsApp"
-                  className="w-full h-full object-cove rounded-full"
-                />  
+                  className="w-full h-full object-cover rounded-full"
+                />
               </motion.a>
               <motion.a
                 href="https://www.facebook.com/share/15ackMYNaw/"
@@ -679,8 +678,8 @@ Please let me know about availability and delivery options.`;
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200 text-blue-600"
               >
                 <img
-                  src="/logoo.jpg"
-                  alt="WhatsApp"
+                  src="/facebook.jpeg"
+                  alt="Facebook"
                   className="w-full h-full object-cove rounded-full"
                 /> 
               </motion.a>
@@ -693,7 +692,7 @@ Please let me know about availability and delivery options.`;
                 className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-200 text-pink-600"
               >
                 <img
-                  src="/logoo.jpg"
+                  src="/instagram.jpeg"
                   alt="WhatsApp"
                   className="w-full h-full object-cove rounded-full"
                 /> 

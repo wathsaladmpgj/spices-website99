@@ -26,26 +26,20 @@ export default function About() {
     {
       name: "Mohamed Zarook",
       role: "Founder & CEO",
-      bio: "Spice expert with 40+ years of experience in global sourcing",
+      bio: "Spice expert with 8+ years of experience in global sourcing",
       image: "👨‍💼",
     },
     {
-      name: "Maria Rodriguez",
-      role: "Head of Quality Control",
+      name: "Nusrath Binth Imthiyaz",
+      role: "Managing Director",
       bio: "Food scientist ensuring every spice meets our premium standards",
       image: "👩‍🔬",
     },
     {
-      name: "Chef Ahmed Hassan",
-      role: "Culinary Director",
-      bio: "Master chef specializing in authentic spice blends",
-      image: "👨‍🍳",
-    },
-    {
-      name: "Lisa Chen",
-      role: "Sustainability Manager",
-      bio: "Leading our eco-friendly sourcing and packaging initiatives",
-      image: "👩‍🌾",
+      name: "Ahamad Zarook",
+      role: "Digital Marketer",
+      bio: "Specializing in software design and digital marketing",
+      image: "",
     },
   ];
 
@@ -281,7 +275,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {team.map((member, index) => (
               <motion.div
                 key={index}

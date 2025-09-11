@@ -388,35 +388,6 @@ export default function Distributors() {
               </motion.div>
             ))}
           </div>
-
-          {/* Our Clients */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Trusted by Industry Leaders</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {clients.map((client, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-4 rounded-lg shadow-lg text-center"
-                >
-                  <div className="text-2xl mb-2">
-                    <BuildingOfficeIcon className="h-8 w-8 mx-auto text-gray-400" />
-                  </div>
-                  <h4 className="font-semibold text-sm text-gray-900 mb-1">{client.name}</h4>
-                  <p className="text-xs text-gray-600">{client.type}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </section>
 
