@@ -180,23 +180,8 @@ export default function Products() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Filters Sidebar */}
           <div className="lg:w-64 flex-shrink-0">
-            {/* Mobile Filter Toggle */}
-            <div className="lg:hidden mb-4">
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center justify-center w-full px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors duration-200"
-              >
-                <FunnelIcon className="h-5 w-5 mr-2" />
-                Filters
-              </button>
-            </div>
-
-            <div
-              className={`space-y-6 ${
-                showFilters ? "block" : "hidden lg:block"
-              }`}
-            >
-              {/* Search */}
+            <div className="space-y-6">
+                    {/* Search */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Search
