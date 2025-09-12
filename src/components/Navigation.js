@@ -15,7 +15,6 @@ const Navigation = () => {
     { name: 'Products', href: '/products' },
     { name: 'Contact', href: '/contact' },
     { name: 'Distributors', href: '/distributors' },
-    { name: 'Farmer Support', href: '/farmer' },
   ];
 
   const toggleMenu = useCallback(() => {
