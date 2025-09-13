@@ -39,7 +39,7 @@ export default function About() {
       name: "Ahamad Zarook",
       role: "Digital Marketer",
       bio: "Specializing in software design and digital marketing",
-      image: "",
+      image: "👨‍💻",
     },
   ];
 

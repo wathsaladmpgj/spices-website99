@@ -53,7 +53,7 @@ export default function Home() {
     rating: 4.9,
     reviews: 127,
     image: "CurryPowder.jpg",
-    description: "Authentic Indian spice blend with complex aromatic flavors",
+    description: "Intensely smoky Spanish paprika for authentic flavors",
     detailedDescription: "Premium Sri Lankan curry powder, carefully blended from aromatic spices, delivers rich flavor, vibrant color, and authentic taste—perfect for curries, soups, stews, and traditional Sri Lankan dishes.",
     origin: "India",
     isOrganic: true,
