@@ -32,7 +32,7 @@ export default function About() {
     {
       name: "Nusrath Binth Imthiyaz",
       role: "Managing Director",
-      bio: "Food scientist ensuring every spice meets our premium standards",
+      bio: "Ensuring every spice meets our premium standards",
       image: "👩‍🔬",
     },
     {

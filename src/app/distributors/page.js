@@ -89,18 +89,18 @@ export default function Distributors() {
   const pricingTiers = [
     {
       tier: "Starter",
-      minimum: "$500",
+      minimum: "RS:30000",
       discount: "15%",
       features: [
         "15% discount on all products",
-        "Free shipping on orders $500+",
+        "Free shipping on orders all orders",
         "Monthly payment terms",
         "Basic marketing materials"
       ]
     },
     {
       tier: "Professional",
-      minimum: "$2,500",
+      minimum: "Rs: 40000",
       discount: "25%",
       features: [
         "25% discount on all products",
@@ -113,7 +113,7 @@ export default function Distributors() {
     },
     {
       tier: "Enterprise",
-      minimum: "$10,000",
+      minimum: "Rs: 50000",
       discount: "40%",
       features: [
         "40% discount on all products",
@@ -128,27 +128,27 @@ export default function Distributors() {
 
   const testimonials = [
     {
-      name: "Mediterranean Gourmet Foods",
-      location: "California, USA",
-      testimonial: "SpiceWorld's wholesale program has been instrumental in our growth. Their quality is unmatched and their support team is always responsive.",
+      name: "MHD Shafy",
+      location: "Sri Lanka",
+      testimonial: "The quality of spices from SpiceWorld is exceptional. My dishes have never tasted better!",
       rating: 5,
       volume: "Enterprise Partner",
       logo: "🏪"
     },
     {
-      name: "Chef's Corner Supply",
-      location: "Texas, USA", 
-      testimonial: "We've been working with SpiceWorld for 3 years. Their competitive pricing and reliable delivery keep our restaurant clients happy.",
+      name: "Araliya Super Stores",
+      location: "Sri Lanka", 
+      testimonial: "We've been using SpiceWorld for our restaurant for 3 years. Consistent quality every time.",
       rating: 5,
-      volume: "Professional Partner",
+      volume: "Enterprise Partner",
       logo: "👨‍🍳"
     },
     {
-      name: "Organic Market Co.",
-      location: "New York, USA",
-      testimonial: "The organic spice selection is amazing. Our customers love the quality and our margins are healthy with their wholesale pricing.",
+      name: "City Hotel",
+      location: "Sri Lanka",
+      testimonial: "Their organic collection is amazing. You can really taste the difference in freshness.",
       rating: 5,
-      volume: "Professional Partner", 
+      volume: "Enterprise Partner", 
       logo: "🛒"
     }
   ];
@@ -186,7 +186,7 @@ export default function Distributors() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.a
-                  href="#registration"
+                  href="/contact"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-amber-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-600 transition-colors duration-200 inline-flex items-center justify-center"
@@ -195,7 +195,7 @@ export default function Distributors() {
                   <ArrowRightIcon className="ml-2 h-5 w-5" />
                 </motion.a>
                 <motion.a
-                  href="#pricing"
+                  href="/products"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-green-600 transition-all duration-200 inline-flex items-center justify-center"
@@ -409,7 +409,7 @@ export default function Distributors() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="#registration"
+                href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-amber-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-600 transition-colors duration-200 inline-flex items-center justify-center"

@@ -93,7 +93,7 @@ export default function Contact() {
       icon: <EnvelopeIcon className="h-6 w-6" />,
       title: "Email Us",
       details: [
-        "moonsproductsc@gmail.com"
+        "moonsproductsco@gmail.com"
       ]
     },
   ];
@@ -330,7 +330,7 @@ export default function Contact() {
                   <h3 className="text-lg font-semibold mb-1">Quick Chat on WhatsApp</h3>
                   <p className="text-green-100 mb-3">Get instant answers to your questions</p>
                   <motion.a
-                    href="https://wa.me/15551237742"
+                    href="https://wa.me/+94720484945"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}

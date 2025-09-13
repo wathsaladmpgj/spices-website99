@@ -535,7 +535,6 @@ export default function Products() {
           </motion.div>
         </div>
       )}
-
       <Footer />
     </div>
   );

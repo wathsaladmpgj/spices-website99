@@ -148,7 +148,7 @@ export default function Home() {
     },
     {
       name: "City Hotel",
-      role: "Senior Chef",
+      role: "Professional Partner",
       content:
         "Their organic collection is amazing. You can really taste the difference in freshness.",
       rating: 5,

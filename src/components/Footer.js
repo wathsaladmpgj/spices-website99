@@ -25,10 +25,11 @@ const Footer = () => {
   ];
 
   const productCategories = [
-    { name: 'Whole Spices', href: '/products?category=whole' },
-    { name: 'Ground Spices', href: '/products?category=ground' },
-    { name: 'Spice Blends', href: '/products?category=blends' },
-    { name: 'Organic Spices', href: '/products?category=organic' },
+    { name: 'Chilli Products', href: '/products?categories=chilli' },
+    { name: 'Curry & Masala Powders', href: '/products?categories=curry' },
+    { name: 'Whole Spices', href: '/products?categories=whole' },
+    { name: 'Spice Powders', href: '/products?categories=spice' },
+    { name: 'Tea & Coffee', href: '/products?categories=tea' },
   ];
 
   return (
@@ -39,14 +40,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-yellow to-primary-green rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
-              <span className="text-xl font-bold">SpiceWorld</span>
+              <span className="text-xl font-bold">Moonsproduct</span>
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Premium quality spices sourced from around the world. 
-              Bringing authentic flavors to your kitchen since 1985.
+              Bringing authentic flavors to your kitchen since 2019.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-300">
@@ -59,7 +57,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-300">
                 <EnvelopeIcon className="h-4 w-4 text-primary-yellow" />
-                <span>moonsproductsc@gmail.com</span>
+                <span>moonsproductsco@gmail.com</span>
               </div>
             </div>
           </div>
@@ -131,22 +129,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 py-6">
+        <div className="border-t border-gray-700 py-6 items-center">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} SpiceWorld. All rights reserved.
+            <p className="text-gray-400 text-sm items-center">
+              © {currentYear} MoonsProducts™. All rights reserved. Powered by <a href="https://intelligenpro.com/" className="text-blue-500 hover:underline">IntelliGenPro</a>.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-primary-yellow text-sm transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-primary-yellow text-sm transition-colors duration-200">
-                Terms of Service
-              </Link>
-              <Link href="/sitemap" className="text-gray-400 hover:text-primary-yellow text-sm transition-colors duration-200">
-                Sitemap
-              </Link>
-            </div>
           </div>
         </div>
       </div>
