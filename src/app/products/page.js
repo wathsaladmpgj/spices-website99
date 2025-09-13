@@ -97,8 +97,8 @@ export default function Products() {
       if (product.weightOptions && product.weightOptions.length > 0) {
         console.log("Setting weight options:", product.weightOptions[0]);
         setSelectedWeight(product.weightOptions[0].weight);
-        setSelectedPrice(product.weightOptions[0].price);
         setSelectedPrice(product.weightOptions[0].originalPrice);
+        setSelectedPrice(product.weightOptions[0].price);
       } else {
         console.log("No weight options, using defaults");
         setSelectedWeight("100g"); // Default weight

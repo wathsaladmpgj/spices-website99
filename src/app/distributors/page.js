@@ -72,7 +72,7 @@ export default function Distributors() {
     {
       icon: <TruckIcon className="h-8 w-8" />,
       title: "Flexible Shipping Options",
-      description: "Free shipping on orders over $500, expedited delivery, and custom logistics solutions"
+      description: "Free shipping on orders over Rs:50000, expedited delivery, and custom logistics solutions"
     },
     {
       icon: <UsersIcon className="h-8 w-8" />,
@@ -93,8 +93,7 @@ export default function Distributors() {
       discount: "15%",
       features: [
         "15% discount on all products",
-        "Free shipping on orders all orders",
-        "Monthly payment terms",
+        "Add shipping Charge",
         "Basic marketing materials"
       ]
     },
@@ -104,8 +103,7 @@ export default function Distributors() {
       discount: "25%",
       features: [
         "25% discount on all products",
-        "Free shipping on all orders",
-        "45-day payment terms",
+        "Add shipping Charge",
         "Custom packaging options",
         "Dedicated account manager"
       ],
@@ -117,8 +115,7 @@ export default function Distributors() {
       discount: "40%",
       features: [
         "40% discount on all products",
-        "Priority shipping and handling",
-        "60-day payment terms",
+        "Add shipping Charge",
         "Private labeling available",
         "Custom product development",
         "Exclusive territory rights"
@@ -236,7 +233,7 @@ export default function Distributors() {
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We've been building successful partnerships with distributors, restaurants, 
-              and retailers worldwide for over 35 years. Our comprehensive program is 
+              and retailers worldwide for over 5+ years. Our comprehensive program is 
               designed to help your business grow.
             </p>
           </motion.div>
@@ -264,81 +261,85 @@ export default function Distributors() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Bulk <span className="text-green-600">Pricing</span> Tiers
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our tiered pricing structure rewards larger volume purchases with better margins
-            </p>
-          </motion.div>
+      /* Pricing Section */
+        <section id="pricing" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+            >
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Bulk <span className="text-green-600">Pricing</span> Tiers
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our tiered pricing structure rewards larger volume purchases with better margins
+          </p>
+            </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-white border-2 rounded-2xl p-8 ${
-                  tier.popular 
-                    ? 'border-green-500 shadow-2xl scale-105' 
-                    : 'border-gray-200 shadow-lg'
-                }`}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {pricingTiers.map((tier, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className={`relative bg-white border-2 rounded-2xl p-8 ${
+            tier.popular 
+              ? 'border-green-500 shadow-2xl scale-105' 
+              : 'border-gray-200 shadow-lg'
+              }`}
+            >
+              {tier.popular && (
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span className="bg-green-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                Most Popular
+              </span>
+            </div>
+              )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.tier}</h3>
-                  <div className="text-4xl font-bold text-green-600 mb-2">
-                    {tier.discount} OFF
-                  </div>
-                  <p className="text-gray-600">Minimum order: {tier.minimum}</p>
-                </div>
+              <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.tier}</h3>
+            <div className="text-4xl font-bold text-green-600 mb-2">
+              {tier.discount} OFF
+            </div>
+            <p className="text-gray-600">Minimum order: {tier.minimum}</p>
+              </div>
 
-                <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, i) => (
-                    <li key={i} className="flex items-start space-x-3">
-                      <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 rounded-lg font-semibold transition-colors duration-200 ${
-                    tier.popular
-                      ? 'bg-green-600 text-white hover:bg-green-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}
-                >
-                  Get Started
-                </motion.button>
-              </motion.div>
+              <ul className="space-y-4 mb-8">
+            {tier.features.map((feature, i) => (
+              <li key={i} className="flex items-start space-x-3">
+                <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-700">{feature}</span>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+              </ul>
 
-      {/* Testimonials & Clients */}
+              <motion.a
+            href="https://wa.me/94720484945"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`w-full py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2 ${
+              tier.popular
+                ? 'bg-green-600 text-white hover:bg-green-700'
+                : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+            }`}
+              >
+            <span>Contact on WhatsApp</span>
+            <span className="text-lg">💬</span>
+              </motion.a>
+            </motion.div>
+          ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials & Clients */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Testimonials */}
