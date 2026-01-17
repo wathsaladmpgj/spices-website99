@@ -73,7 +73,7 @@ export const products = [
     originalPrice: 270,
     rating: 4.7,
     reviews: 156,
-    image: "MeatCurryMasala.jpg",
+    image: "meed-curry-masala.jpg",
     description: "True Ceylon cinnamon with delicate, sweet flavor",
     detailedDescription: "Premium Sri Lankan Meat Curry Masala, carefully blended with aromatic spices, delivers bold flavor, rich aroma, and authentic taste—perfect for chicken, beef, mutton, and traditional Sri Lankan curries.",
     origin: "Sri Lanka",
